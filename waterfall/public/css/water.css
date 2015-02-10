@@ -1,0 +1,26 @@
+.main *{
+    margin: 0;
+    padding: 0;
+}
+.clearFix{
+    clear: both;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.main{
+    position: relative;
+}
+.box{
+    float: left;
+    padding: 10px 0 0 15px;
+}
+.box>.pic{
+    padding: 10px 15px 10px 15px;
+    border:1px solid #eee;
+    border-radius: 5px;
+}
+.box>.pic img{
+    width: 195px;
+}
