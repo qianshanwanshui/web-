@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="public/big/big.css">
+	<script type="text/javascript" src="public/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="public/jquery/jquery.form.js"></script>
+	<script type="text/javascript" src="public/big/big.js"></script>
+	<meta charset="UTF-8">
+	<title>big</title>
+</head>
+<body>
+	<div class="header">
+		<div class="content center">
+			logo
+		</div>
+	</div>
+	<div class="naver">
+		<div class="content center">
+			<div class="nav">
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">文章列表</a></li>
+				<li><a href="#">瀑布流</a></li>
+			</div>		
+		</div>
+	</div> 
+	<div class="container">
+		<div class="content center">
+			<div class="bread">
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">服装</a></li>
+				<li><a href="#">男装</a></li>
+				<li><a href="#">上衣</a></li>
+			</div>
+			<div class="panel">
+				<h1>标题</h1>
+				<h2>副标题</h2>
+
+				这是内容
+			</div>
+			<div class="edit">
+				<form id="form1" method="post">
+					<textarea name="test" id="test" cols="30" rows="10"><span style='margin-left:10px;'></span>这是支持换行和空格的文本框</textarea>
+					<div><button type="submit" class="btn danger">提交</button>
+					<a href="#" class="btn danger">警告按钮</a>
+					<div class="clearFix"></div>
+					</div>
+				</form>
+			</div>
+			<div class="pageing">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">上一页</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li class="current"><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">下一页</a></li>
+				<li><a href="#">尾页</a></li>
+			</div>
+			<div>单图及时上传</div>
+			<div class="oneupload">
+				<form method="post" id="taofile1" enctype="multipart/form-data">
+				<input type="file" name="file" onchange="oneUpload('#taofile1','test.php')" class="file">
+				<img src="public/img/1.jpg" alt="">
+				<form>
+			</div>		
+		</div>
+	</div>
+	<div class="footer">
+		<div class="content center">
+			footer
+		</div>
+	</div>
+<script>
+taoedit("#test");
+$("#form1").submit(function () {
+	$("#form1").ajaxSubmit({
+		url:"test.php",
+		dataType:"html",
+		success:function(value){
+			//$("#form1 #test").val(value);
+			alert("提交成功");
+		}
+	});
+	return false;
+})
+</script>
+</body>
+</html>

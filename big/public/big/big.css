@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clearFix{
+	clear: both;
+}
+.center{
+	margin: 0 auto;
+}
+.header{
+	width: 100%;
+	background:#fefefe;
+}
+.naver{
+	width: 100%;
+	background: green;
+}
+.container{
+	width: 100%;
+	background:#efefef;
+	/*background: green;*/
+}
+.content{
+	width: 1000px;
+}
+.footer{
+	width: 100%;
+	line-height:60px;
+	background: orange;
+}
+/*
+ *导航
+ */
+ .nav>li{
+	list-style: none;
+	float: left;
+	height:40px;
+	line-height:40px;
+	padding: 10px 10px;
+	border-right: 1px solid #65fefe;
+	background:#efefef;
+	opacity:0.8;
+ }
+ .nav>li:hover{
+ 	height:38px;
+ 	line-height:38px;
+ 	border-bottom:2px solid #3e3efe;
+ 	opacity:1;
+ }
+ .nav>li>a{
+ 	text-decoration: none;
+ }
+/*
+ *分页样式
+ */
+.pageing{
+	position: relative;
+	margin: 0 auto;
+}
+.pageing>li{
+	list-style: none;
+	float: left;
+	padding: 5px 15px 5px 15px;
+	border-top:1px solid #E3E3E3;
+	border-bottom: 1px solid #E3E3E3;
+	border-left: 1px solid #E3E3E3;
+	border-right: 0px solid #E3E3E3;
+}
+.pageing>.current{
+	background: #333;
+}
+.pageing>.current>a{
+	background: #333;
+	color: #eee;
+}
+.pageing>li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+/*
+ *面包屑
+ */
+.bread>li{
+	list-style: none;
+	float: left;
+	padding: 5px 0px 5px 0px;
+}
+.bread>li>a{
+	text-decoration: none;
+}
+.bread>li>span{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*
+ *面板
+ */
+ .panel{
+ 	padding: 10px 10px;
+ }
+ /*
+  *按钮
+  */
+  .btn{
+  	display: block;
+  	float: left;
+  	height: 40px;
+  	padding:0px 20px 0px 20px;
+  	line-height: 40px;
+  	border-radius: 5px;
+  	text-align: center;
+  	text-decoration: none;
+  	background: #e3e3e3;
+  	color: #000;
+  	border:0px;
+  	opacity:0.8;
+  }
+  .btn:hover{
+  	opacity: 1;
+  }
+  .danger{
+  	background: rgb(255,100,1);
+  }
+
+  /*
+   *单图上传
+   */
+  #taofile1 .file{
+  	position: absolute;
+  	width: 200px;
+  	height:150px;
+  	opacity: 0;
+  	filter:alpha(opacity:0);
+  }
+  #taofile1 img{
+  	max-width: 200px;
+  	max-height: 150px;
+  }
