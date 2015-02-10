@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="public/jquery/jquery-1.7.2.min.js"></script>
+    <meta charset="UTF-8">
+    <title>scroll</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 1000px;
+        height: 200px;
+        overflow: hidden;
+    }
+    li{
+        list-style: none;
+        display: block;
+        width: 300px;
+        height: 200px;
+        float: left;
+    }
+    img{
+        width: 300px;
+        height: 200px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+        <ul>
+            <li><img src="public/img/1.jpg" alt=""></li>
+            <li><img src="public/img/2.jpg" alt=""></li>
+            <li><img src="public/img/3.jpg" alt=""></li>
+            <li><img src="public/img/4.jpg" alt=""></li>
+            <li><img src="public/img/5.jpg" alt=""></li>
+        </ul>
+</div>
+<script type="text/javascript">
+    var $oContainer=$(".container");
+    var $oLi=$(".container>ul>li");
+    var $oUl=$(".container>ul");
+    $oLi.clone().appendTo($oUl);
+    var $oLi=$(".container>ul>li");
+    var liLen=$oLi.length;
+    var liWidth=$oLi.width();
+    $oUl.width(liLen*liWidth);
+    function scroll(){
+        var temp=$oContainer.scrollLeft();
+        if ((temp+$oContainer.width())>=$oUl.width()) {
+            $oContainer.scrollLeft(0);
+        }else{
+            $oContainer.scrollLeft($oContainer.scrollLeft()+5);
+        };
+    }
+    var interval=setInterval("scroll()",100);
+    $oContainer.mouseover(function() {
+        clearInterval(interval);
+    }),
+    $oContainer.mouseout(function() {
+        interval=setInterval("scroll()",100);
+    });
+</script>
+</body>
+</html>
